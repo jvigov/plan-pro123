@@ -38,6 +38,13 @@ body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:"Bri
 .legend i{width:12px;height:12px;border-radius:50%;display:inline-block}
 .legend i.ring{border:2.5px solid var(--c-gold);background:var(--c-you)}
 @media (max-width:820px){.brand{display:none}.legend{left:12px;right:12px;max-width:none;justify-content:center;font-size:11.5px}}
+.toprow{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin:0 0 10px}
+.toprow .step{margin:2px 0 0}
+.wm{display:flex;flex-direction:column;align-items:flex-end;text-align:right;gap:1px;padding:4px 9px 4px 0;border-right:2.5px solid var(--c-gold);line-height:1.2;pointer-events:none;flex:none}
+.wm-a{font-size:11.5px;color:var(--ink)}
+.wm-a b{font-weight:800}
+.wm-b{font-size:10px;font-weight:600;color:var(--muted)}
+}
 .tap{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);font-size:14px;color:var(--muted);pointer-events:none;transition:opacity .4s}
 .rail{background:var(--surface);border-left:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
 .rail-in{flex:1;overflow:auto;padding:30px 28px 18px}
@@ -100,7 +107,7 @@ h1{font-size:clamp(30px,3.1vw,44px);line-height:1.04;letter-spacing:-.02em;margi
   </div>
   <aside class="rail">
     <div class="rail-in" aria-live="polite">
-      <p class="step" id="step"></p>
+      <div class="toprow"><p class="step" id="step"></p><div class="wm" aria-label="Creado por Johnatan Vigo, distribuidor independiente de Fuxion"><span class="wm-a">Creado por <b>Johnatan Vigo</b> 🇵🇪</span><span class="wm-b">Distribuidor independiente de Fuxion</span></div></div>
       <h1 id="ttl"></h1>
       <p class="body" id="body"></p>
       <div class="checks" id="checks"></div>
@@ -111,7 +118,7 @@ h1{font-size:clamp(30px,3.1vw,44px);line-height:1.04;letter-spacing:-.02em;margi
         <div class="amt-l">ganancia aproximada por periodo</div>
         <div class="pills"><span class="pill" id="p1">Pro 1 US$50</span><span class="pill" id="p2">Pro 2 US$200</span><span class="pill" id="p3">Pro 3 US$500</span></div>
       </div>
-      <p class="note">Bonos Pro del plan de Clientes Preferentes de Fuxion, en dólares. Cada nivel se gana una vez por periodo de 4 semanas. PV = puntos de compra. El ingreso por volumen es referencial y depende de lo que facture cada red. Presentación elaborada por un distribuidor independiente de Fuxion.</p>
+      <p class="note">Bonos Pro del plan de Clientes Preferentes de Fuxion, en dólares. Cada nivel se gana una vez por periodo de 4 semanas. PV = puntos de compra. El ingreso por volumen es referencial y depende de lo que facture cada red. Creado por Johnatan Vigo, distribuidor independiente de Fuxion.</p>
     </div>
     <div class="controls">
       <button class="btn" id="prev" aria-label="Paso anterior">‹</button>
